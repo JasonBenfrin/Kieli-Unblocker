@@ -1,0 +1,9 @@
+.wiktrans
+.derived
+.etym
+a[style='color: purple; text-decoration: underline']
+div.wkpcont > p
+a[style='text-decoration: underline; color: #A00']
+.wiktTitleDerived
+div.wikichoice > b
+.wikilist
