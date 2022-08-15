@@ -1,10 +1,7 @@
 const banners = document.querySelectorAll('.ban')
 const blurs = document.querySelectorAll('.blr')
 
-chrome.storage.sync.get("unblock", (data) => {
-  if(!data.unblock) return
-  unblock()
-})
+unblock()
 
 async function unblock() {
   if (blurs.length < 1) return
@@ -30,11 +27,17 @@ async function unblock() {
   })
 
   // Manual Selectors
-  // Synonym selector: div.cont.wikt > g-ay
+  // Synonym selector: div.cont.wikt > g-ay & g-y
   const synonyms = document.querySelectorAll("div.cont.wikt > g-ay")
   synonyms.forEach(synonym => {
     synonym.insertAdjacentHTML("afterend", rot13(synonym.outerHTML))
     synonym.remove()
+  })
+
+  const gys = document.querySelectorAll("g-y")
+  gys.forEach(gy => {
+    gy.insertAdjacentHTML("afterend", rot13(gy.outerHTML))
+    gy.remove()
   })
 
   // Example sentence selector
