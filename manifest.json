@@ -30,5 +30,10 @@
       "resources": ["monkeyPatch.js"],
       "matches": ["*://kieli.net/*"]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "kieliunblock@jasonbenfrin.tk"
+    }
+  }
 }
